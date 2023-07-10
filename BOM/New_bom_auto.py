@@ -35,5 +35,7 @@ info_done.loc[:,"BOM明细行/组件/单位"]= info_done["计量单位"]
 info_done.loc[:,"编号"]= info_done["包装"]
 info_done.loc[:,"主原材料"]= info_done["项目"]
 info_done["主原材料/外部 ID"]= ''
+
+
 #print(info_done.head())
 info_done.to_excel("/Users/frank/Downloads/ALD/BOM/BOM_info_auto_half_done.xlsx")
