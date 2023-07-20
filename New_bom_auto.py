@@ -19,8 +19,8 @@ info_done = pd.merge(df_New_bom,df_info_bom,how= 'inner',on= "项目")
 
 info_done.drop(["储存温度","储存温度（内部）",'湿','热','光','气','敏感性'],axis=1,inplace=True)
 
-info_done["tag_1"]= '1'
-info_done["tag_2"]= ''
+info_done["tag_1"]= ''
+info_done["tag_2"]= '1'
 info_done.loc[:,"产品变体/内部参考"]= info_done["包装"]
 info_done["产品/ID"]= ''
 info_done["产品变体/ID"]= ''
