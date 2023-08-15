@@ -55,6 +55,21 @@ cell_element_price = soup.find('div', class_='pdp-price')
 # 提取已定位单元格的文本内容
 print(f'价格:{cell_element_price.text}')
 
+# thead = table_PKG_price_stock.find("thead")
+# headers_table = thead.find_all('td')
+# headers_table_texts = [header.text for header in headers_table]
+# print(headers_table_texts)
+
+# bodys_table = tbody.find_all("tr")
+# bodys_table_texts = [body.text for body in bodys_table]
+# print(bodys_table_texts)
+
+# all_rows = table_PKG_price_stock.find_all('tr')
+# for row in all_rows:
+#     cells = row.find_all(["th",'td'])
+#     row_data = [cell.text for cell in cells]
+#     print(row_data)
+
 
 
 
