@@ -1,0 +1,23 @@
+from selenium import webdriver
+from bs4 import BeautifulSoup
+from selenium.webdriver.common.keys import Keys
+import time
+import json
+path_driver = '/Users/frank/Downloads/ALD/Selenium/chromedriver-mac-x64/chromedriver.exe'
+driver = webdriver.Chrome()
+
+driver.get("https://www.bidepharm.com/products/213382-40-2.html")
+
+# 等待页面加载和动态数据生成
+driver.implicitly_wait(25)  # 等待最多10秒
+
+# 获取页面源代码（包含动态加载的数据）
+page_source = driver.page_source
+
+# 关闭浏览器
+driver.quit()
+soup = BeautifulSoup(page_source,"html.parser")
+pretty_html = soup.prettify()
+output_data ={"orginal_page_data":pretty_html}
+with open("orginal_page_data.json","w") as json_file:
+    json.dump(output_data,json_file,indent=4)
