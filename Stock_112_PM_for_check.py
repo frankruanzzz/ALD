@@ -19,6 +19,7 @@ def Condition_112(df_112):
             (df_112.loc[:,"位置"]!="BLYF")&\
             (df_112.loc[:,"位置"]!="A17-J")&\
             (df_112.loc[:,"位置"]!="LS205")&\
+            (~df_112.loc[:,"位置"].str.contains("YL-D33"))&\
             (df_112.loc[:,"位置"]!="沪试剂/库存/沪试料/E栋丙类库2楼/E203中型货架库/YL-YP-HG")&\
             (~df_112.loc[:,"位置"].str.contains("112"))&\
             (~df_112.loc[:,"位置"].str.contains("退货位置"))&\
